@@ -1,6 +1,8 @@
 # LINE: Large-scale information network embedding
 
-##Introduction
+** Note this repository will no longer be maintained. For node embedding methods, please use our graph embedding system GraphVite: https://github.com/DeepGraphLearning/graphvite
+
+**Introduction**
 
 This is the LINE toolkit developed for embedding very large-scale information networks. It is suitable to a variety of networks including directed, undirected, binary or weighted edges. The LINE model is quite efficient, which is able to embed a network with millions of vertices and billions of edges on a single machine within a few hours.
 ```
@@ -8,7 +10,7 @@ Contact: Jian Tang, tangjianpku@gmail.com
 Project page: https://sites.google.com/site/pkujiantang/line
 This work was done when the author was working at Microsoft Research
 ```
-##Usage
+**Usage**
 
 We provide both the Windows and LINUX versions. To compile the souce codes, some external packages are required, which are used to generate random numbers for the edge-sampling algorithm in the LINE model. For Windows version, the BOOST package is used and can be downloaded at http://www.boost.org/; for LINUX, the GSL package is used and can be downloaded at http://www.gnu.org/software/gsl/
 
@@ -46,10 +48,11 @@ of bad 4
 
 **Examples**
 
-An example to run the Youtube data set (available at http://socialnetworks.mpi-sws.mpg.de/data/youtube-links.txt.gz) is provided at the files train_youtube.bat/train_youtube.sh
+We provide an example running script for the Youtube data set (available at http://socialnetworks.mpi-sws.mpg.de/data/youtube-links.txt.gz). The script will first run LINE to learn network embeddings, then it will evaluate the learned embeddings on the node classification task.
 
+To run the script, users first need to compile the evaluation codes by running make.sh in the folder "evaluate". Afterwards, we can run train_youtube.bat or train_youtube.sh to run the whole pipeline.
 
-##Citation
+**Citation**
 
 ```
 @inproceedings{tang2015line,
